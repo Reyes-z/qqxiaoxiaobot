@@ -6,7 +6,9 @@ import random
 from send import send_message
 # 定义一个变量来追踪是否应该执行代码  
 should_run = False 
-mode=-1
+mode = -1
+position = [(200,750),(1000,750),(1600,750)]
+
 def program_attitude(e):
     global should_run   
     should_run = not should_run  
@@ -19,9 +21,7 @@ def program_attitude(e):
     else:
         print("停止执行")
 
-
 keyboard.on_press_key("space", program_attitude)
-
 
 print("程序已启动，按空格键开始/停止执行代码。")  
 
@@ -32,60 +32,26 @@ while True:
         try: 
             if mode == 1:
                 time.sleep(1)
-                pyautogui.click(200,750)  
-                send_message("修炼")
-                send_message("破")
-        
-                time.sleep(1)
-            
-                pyautogui.click(1000,750)
-                send_message("修炼")
-                send_message("破")
-            
-                time.sleep(1)
-                pyautogui.click(1600,750)
-                send_message("修炼")
-                send_message("破") 
-            
-                time.sleep(1)
+                for position in position:
+                    pyautogui.click(position)
+                    send_message("修炼")
+                    send_message("破")
+                    time.sleep(1)
                 time.sleep(random.randint(35, 38))
                 
             elif mode == 2:
-                
-                time.sleep(1)
-                pyautogui.click(200,750)  
-                send_message("修炼")
-        
-                time.sleep(1)
-            
-                pyautogui.click(1000,750)
-                send_message("修炼")
-            
-                time.sleep(1)
-                pyautogui.click(1600,750)
-                send_message("修炼") 
-            
-                time.sleep(1)
-                time.sleep(random.randint(48, 51))
+                for position in position:
+                    pyautogui.click(position)
+                    send_message("修炼")
+                    time.sleep(1)
+                time.sleep(random.randint(47, 48))
                 
             elif mode == 3:
-                time.sleep(1)
-                pyautogui.click(200,750)  
-                send_message("修仙签到")
-                send_message("宗门丹药领取")
-        
-                time.sleep(1)
-            
-                pyautogui.click(1000,750)
-                send_message("修仙签到")
-                send_message("宗门丹药领取")
-            
-                time.sleep(1)
-                pyautogui.click(1600,750)
-                send_message("修仙签到")
-                send_message("宗门丹药领取")
-            
-                time.sleep(1)
+                for position in position:
+                    pyautogui.click(position)
+                    send_message("修仙签到")
+                    send_message("宗门丹药领取")
+                    time.sleep(1)
                 time.sleep(random.randint(35, 38))   
             else:
                 print("输入了错误的值请输入正确的数字.")
