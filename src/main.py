@@ -4,7 +4,8 @@ import pyautogui
 import pyperclip
 import random
 from send import send_message
-# 定义一个变量来追踪是否应该执行代码  
+
+  
 should_run = False 
 mode = -1
 position = [(200,750),(1000,750),(1600,750)]
@@ -32,23 +33,23 @@ while True:
         try: 
             if mode == 1:
                 time.sleep(1)
-                for position in position:
-                    pyautogui.click(position)
+                for i in range(0,len(position)):
+                    pyautogui.click(position[i])
                     send_message("修炼")
                     send_message("破")
                     time.sleep(1)
                 time.sleep(random.randint(35, 38))
                 
             elif mode == 2:
-                for position in position:
-                    pyautogui.click(position)
+                for i in range(0,len(position)):
+                    pyautogui.click(position[i])
                     send_message("修炼")
                     time.sleep(1)
                 time.sleep(random.randint(47, 48))
                 
             elif mode == 3:
-                for position in position:
-                    pyautogui.click(position)
+                for i in range(0,len(position)):
+                    pyautogui.click(position[i])
                     send_message("修仙签到")
                     send_message("宗门丹药领取")
                     time.sleep(1)
