@@ -78,6 +78,25 @@ while True:
         
             time.sleep(1)
             time.sleep(random.randint(48, 51))
-          
+            
+        elif a == 3:
+            time.sleep(1)
+            pyautogui.click(200,750)  
+            send_message("修仙签到")
+            send_message("宗门丹药领取")
+    
+            time.sleep(1)
+        
+            pyautogui.click(1000,750)
+            send_message("修仙签到")
+            send_message("宗门丹药领取")
+         
+            time.sleep(1)
+            pyautogui.click(1600,750)
+            send_message("修仙签到")
+            send_message("宗门丹药领取")
+        
+            time.sleep(1)
+            time.sleep(random.randint(35, 38))   
          
         # time.sleep(random.randint(58, 61)) 
