@@ -53,7 +53,8 @@ while True:
                     send_message("修仙签到")
                     send_message("宗门丹药领取")
                     time.sleep(1)
-                time.sleep(random.randint(35, 38))   
+                print("签到与领取完成")
+                program_attitude(1)
             else:
                 print("输入了错误的值请输入正确的数字.")
         except ValueError:
