@@ -5,7 +5,6 @@ import pyperclip
 import random
 from send import send_msg , wait_time
 
-should_run = False 
 mode = -1
 pos = [(200,750),(1000,750),(1600,750)]
 
