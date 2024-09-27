@@ -6,6 +6,7 @@ import random
 
 pos=[]
 alt = True
+
 def detect(e): 
     global pos
     pos.append((mouse_x, mouse_y))
@@ -14,6 +15,7 @@ def detect(e):
 def end(e):
     global alt
     alt = False
+    time.sleep(1)
     print("程序已结束")
     print("共收集到", len(pos),"个坐标值")
     for i in range(len(pos)):

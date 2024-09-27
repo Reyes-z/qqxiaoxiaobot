@@ -5,15 +5,17 @@ import pyperclip
 import random
 from send import send_msg , wait_time
 
+pyautogui.FAILSAFE=False
 mode = -1
 pos = [(200,750),(1000,750),(1600,750)]
 
 def start():
     print("开始执行")
     global mode
-    mode = int(input("1.自动修炼模式\n2.自动修炼自动突破模式\n3.修仙签到与宗门丹药领取\n 请输入一个数字 (1, 2, 3): "))
+    print("1.自动修炼模式\n2.自动修炼自动突破模式\n3.修仙签到与宗门丹药领取\n4.自定义指令模式\n")
+    mode = int(input(" 请输入一个数字 (1, 2, 3):"))
     print("你输入的数字是:", mode)
-    print("运行过程中按空格，程序停止下进行一轮操作。")
+    print("若在运行过程中按空格，程序将下一轮操作前停止。")
 
 def program_attitude(e):
     global mode   
@@ -48,4 +50,13 @@ while True:
             send_msg("宗门丹药领取")
             time.sleep(1)
         print("签到与领取完成")
+        program_attitude(1)
+        
+    elif mode == 4:
+        message = (input("请输入需要执行的自定义命令"))
+        for i in range(len(pos)):
+            pyautogui.click(pos[i])
+            send_msg(message)
+            time.sleep(1)
+        print("自定义命令执行完成")
         program_attitude(1)
