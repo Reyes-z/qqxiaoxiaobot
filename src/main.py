@@ -7,7 +7,7 @@ from send import send_msg , wait_time
 
 pyautogui.FAILSAFE=False
 mode = -1
-pos = [(200,750),(1000,750),(1600,750)]
+pos = [(200,750),(1000,750),(1600,750)] # 这里就是所有QQ窗口对话框的坐标，按需更改。
 
 def start():
     print("开始执行")
