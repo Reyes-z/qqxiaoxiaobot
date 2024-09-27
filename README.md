@@ -19,8 +19,12 @@
 
 ## 使用方式  
 
-1.安装python环境。
-2.根据使用pip install -r requirements.txt命令安装所使用的库。
-3.进入detect.py确定各输入框位置坐标。
-4.将坐标列表填入main文件pos变量中。
-5.启动程序。  
+1. 安装python环境。
+2. 根据使用pip install -r requirements.txt命令安装所使用的库。
+3. 进入detect.py确定各输入框位置坐标。
+4. 将坐标列表填入main文件pos变量中。
+5. 启动程序。
+  
+## 我的联系方式 
+
+欢迎加入QQ群：361977949 交流。
